@@ -2,6 +2,7 @@
 FROM oracle/graalvm-ce:19.1.1 as build-aot
 
 # Set working dir
+RUN gu install native-image
 RUN mkdir /app
 WORKDIR /app
 
